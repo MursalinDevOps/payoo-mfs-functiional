@@ -17,7 +17,7 @@ document
       //   TRANSACTION HISTORY
       const p = document.createElement("p");
     p.innerHTML = `
-    <p class="bg-green-800 rounded-xl text-white p-4">Add money Tk.${addMoney}, New balance Tk.${newBalance}</p>
+    <p class="bg-green-800 rounded-xl text-white p-4">Add money Tk.${addMoney}<br> New balance Tk.${newBalance}</p>
     `
       document.getElementById("transaction-container").appendChild(p);
     } else {
@@ -46,10 +46,12 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
         const p = document.createElement("p");
         p.innerHTML = ` 
         <p class="bg-red-800 rounded-xl text-white p-4">
-        Withdraw Tk.${withdrawAmount}, New balance Tk.${newBalance}
+        Withdraw Tk.${withdrawAmount}<br> New balance Tk.${newBalance}
         </p>
         `
         document.getElementById("transaction-container").appendChild(p);
+      }else{
+        alert('Wrong credentials! Try again')
       }
 });
 
