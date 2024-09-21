@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo || MFS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .space-y-2{
+            width: 265px;
+            height: 312px;
+            overflow-y: scroll;
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="flex justify-center mt-2">
+        <div class="mockup-phone">
+          <div class="camera"></div>
+          <div class="display">
+            <div class="artboard artboard-demo phone-4">
+              <!-- LOG IN -->
+              <div class="hero bg-base-200 min-h-screen">
+                <div class="hero-content flex-col">
+                  <div class="text-center lg:text-left">
+                    <div class="stats shadow">
+                      <div class="stat">
+                        <div class="stat-title">Available Balance</div>
+                        <div class="stat-value">
+                          $<span id="available-balance">500</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="divider"></div>
+
+                  <section>
+                    <!-- BUTTONS -->
+                    <button
+                      id="btn-add-money"
+                      class="btn sm:btn-md md:btn-md text-white btn-success"
+                    >
+                      Add Money
+                    </button>
+
+                    <button
+                      id="btn-withdraw"
+                      class="btn sm:btn-md md:btn-md btn-error text-white"
+                    >
+                      Withdraw
+                    </button>
+                    <div class="flex justify-center mt-2">
+                      <button
+                        id="btn-transaction"
+                        class="btn btn-primary btn-block"
+                      >
+                        Transactions
+                      </button>
+                    </div>
+                  </section>
+                  <!-- ADD MONEY FORM -->
+                  <div
+                    id="add-money-form"
+                    class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-8"
+                  >
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Add Money</span>
+                        </label>
+                        <input
+                          id="add-money-amount"
+                          type="text"
+                          placeholder="Enter Amount"
+                          class="input input-bordered"
+                          required
+                        />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin</span>
+                        </label>
+                        <input
+                          id="add-money-pin"
+                          type="password"
+                          placeholder="Enter 4 digit pin"
+                          class="input input-bordered"
+                          required
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div class="form-control mt-4">
+                        <button
+                          id="add-money-btn"
+                          class="btn btn-outline btn-success"
+                        >
+                          Add Money
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- WITHDRAW FORM -->
+                  <div
+                    id="withdraw-form"
+                    class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mt-8 hidden"
+                  >
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Withdraw</span>
+                        </label>
+                        <input
+                          id="withdraw-amount"
+                          type="text"
+                          placeholder="Enter Amount"
+                          class="input input-bordered"
+                          required
+                        />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                          <span class="label-text">Pin</span>
+                        </label>
+                        <input
+                          id="withdraw-money-pin"
+                          type="password"
+                          placeholder="Enter 4 digit pin"
+                          class="input input-bordered"
+                          required
+                          autocomplete="off"
+                        />
+                      </div>
+                      <div class="form-control mt-4">
+                        <button
+                          id="withdraw-btn"
+                          class="btn btn-outline btn-error"
+                        >
+                          Withdraw
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- TRANSACTION HISTORY -->
+                  <div id="transaction-history-container" class="hidden">
+                    <!--  -->
+                    <h3 class="text-2xl  pb-2">Transaction History</h3>
+                    <div class=" space-y-2" id="transaction-container"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/arithmetics.js"></script>
+  </body>
+</html>
