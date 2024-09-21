@@ -1,7 +1,6 @@
 // PIN
 pinNumber = getInputPinById("add-money-pin");
- // AVAILABLE BALANCE
-//  
+
 // ADD MONEY ARITHMETICS
 document
   .getElementById("add-money-btn")
